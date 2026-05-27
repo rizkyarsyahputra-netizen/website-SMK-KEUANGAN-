@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPDB SMK - Website Penerimaan Siswa Baru Resmi</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .bg-pattern {
+            background-image: radial-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased bg-pattern">
+
+    <div class="bg-gradient-to-r from-blue-700 to-indigo-800 text-white text-xs font-semibold py-2.5 px-4 text-center tracking-wide">
+        <i class="fas fa-university mr-2"></i> JALUR PRESTASI & REGULER GELOMBANG 1 RESMI DIBUKA. KUOTA TERBATAS!
+    </div>
+
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-3">
+                    <div class="bg-blue-600 text-white p-2.5 rounded-xl font-black text-xl shadow-md tracking-wider">SMK</div>
+                    <div>
+                        <span class="font-black text-2xl tracking-tight text-slate-900 block leading-none">KEUANGAN</span>
+                        <span class="text-[10px] tracking-widest uppercase font-bold text-blue-600">Formulir PPDB Online</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-6 font-semibold text-sm">
+                    <a href="#tentang" class="text-slate-600 hover:text-blue-600 transition">Tentang Sekolah</a>
+                    <a href="#jurusan" class="text-slate-600 hover:text-blue-600 transition">Kompetensi Jurusan</a>
+                    <a href="#formulir-daftar" class="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition shadow-lg shadow-blue-500/20 flex items-center gap-2">
+                        <i class="fas fa-edit"></i> Isi Formulir Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="formulir-daftar" class="py-16 max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="bg-white rounded-3xl shadow-2xl border border-slate-200/60 overflow-hidden">
+            
+            <div class="bg-gradient-to-r from-slate-900 to-blue-950 text-white p-8 sm:p-10 text-center relative">
+                <div class="absolute top-4 right-4 bg-emerald-500 text-slate-950 text-[10px] font-black uppercase px-3 py-1 rounded-full">
+                    <i class="fas fa-lock mr-1"></i> Terkoneksi WA Sekolah
+                </div>
+                <h2 class="text-3xl font-black tracking-tight mb-2">Formulir Pendaftaran Siswa Baru</h2>
+                <p class="text-slate-400 text-xs sm:text-sm max-w-xl mx-auto">Isi data calon siswa di bawah ini dengan benar. Setelah diklik kirim, data akan langsung masuk ke WhatsApp admin panitia PMB sekolah.</p>
+            </div>
+
+            <form class="p-6 sm:p-10 space-y-8" onsubmit="kirimFormPPDB(event)">
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2 pb-2 border-b border-slate-100">
+                        <span class="bg-blue-100 text-blue-600 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">1</span>
+                        <h3 class="text-sm font-black uppercase tracking-wider text-slate-900">Identitas Diri Calon Siswa</h3>
+                    </div>
+                    
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="space-y-1.5">
+                            <label class="text-[11px] font-bold text-slate-600 uppercase">Nama Lengkap Siswa</label>
+                            <input type="text" id="siswa-nama" required placeholder="Contoh: Muhammad Rafli" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-blue-600 focus:bg-white text-sm transition">
+                        </div>
+                        <div class="space-y-1.5">
+                            <label class="text-[11px] font-bold text-slate-600 uppercase">Nomor WhatsApp Siswa (Aktif)</label>
+                            <input type="tel" id="siswa-wa" required placeholder="Contoh: 0812345678" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-blue-600 focus:bg-white text-sm transition">
+                        </div>
+                    </div>
+
+                    <div class="grid sm:grid-cols-3 gap-4">
+                        <div class="space-y-1.5 sm:col-span-2">
+                            <label class="text-[11px] font-bold text-slate-600 uppercase">Asal Sekolah (SMP/MTs)</label>
+                            <input type="text" id="siswa-smp" required placeholder="Contoh: SMP Negeri 1 Dekola" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-blue-600 focus:bg-white text-sm transition">
+                        </div>
+                        <div class="space-y-1.5">
+                            <label class="text-[11px] font-bold text-slate-600 uppercase">Jenis Kelamin</label>
+                            <select id="siswa-jk" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-blue-600 text-sm font-semibold text-slate-700">
+                                <option value="Laki-laki">Laki-laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2 pb-2 border-b border-slate-100">
+                        <span class="bg-blue-100 text-blue-600 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">2</span>
+                        <h3 class="text-sm font-black uppercase tracking-wider text-slate-900">Akademik & Kelengkapan</h3>
+                    </div>
+
+                    <div class="grid sm:grid-cols-3 gap-4">
+                        <div class="space-y-1.5 sm:col-span-1">
+                            <label class="text-[11px] font-bold text-slate-600 uppercase">Rata-Rata Nilai Rapor</label>
+                            <input type="number" step="0.1" id="siswa-nilai" required placeholder="Misal: 85.5" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-blue-600 focus:bg-white text-sm transition">
+                        </div>
+                        <div class="space-y-1.5 sm:col-span-1">
+                            <label class="text-[11px] font-bold text-slate-600 uppercase">Pilihan Jurusan (SMK)</label>
+                            <select id="siswa-jurusan" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-blue-600 text-sm font-bold text-blue-600">
+                                <option value="TKJ (Teknik Komputer & Jaringan)">TKJ (Komputer Jaringan)</option>
+                                <option value="PBK (Perbankan & Keuangan Syariah)">PBK (Perbankan Syariah)</option>
+                                <option value="AKT (Akuntansi & Keuangan Lembaga)">AKT (Akuntansi)</option>
+                                <option value="ADP (Administrasi Perkantoran)">ADP (Admin Perkantoran)</option>
+                            </select>
+                        </div>
+                        <div class="space-y-1.5 sm:col-span-1">
+                            <label class="text-[11px] font-bold text-slate-600 uppercase">Ukuran Baju Seragam</label>
+                            <select id="siswa-seragam" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-blue-600 text-sm font-semibold text-slate-700">
+                                <option value="S">S (Small)</option>
+                                <option value="M">M (Medium)</option>
+                                <option value="L">L (Large)</option>
+                                <option value="XL">XL (Extra Large)</option>
+                                <option value="XXL">XXL (Double XL)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2 pb-2 border-b border-slate-100">
+                        <span class="bg-blue-100 text-blue-600 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">3</span>
+                        <h3 class="text-sm font-black uppercase tracking-wider text-slate-900">Data Orang Tua / Wali</h3>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="space-y-1.5">
+                            <label class="text-[11px] font-bold text-slate-600 uppercase">Nama Ayah / Ibu / Wali</label>
+                            <input type="text" id="ortu-nama" required placeholder="Contoh: Heri Setiawan" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-blue-600 focus:bg-white text-sm transition">
+                        </div>
+                        <div class="space-y-1.5">
+                            <label class="text-[11px] font-bold text-slate-600 uppercase">No. HP/WA Orang Tua</label>
+                            <input type="tel" id="ortu-wa" required placeholder="Contoh: 0813XXXXXXXX" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-blue-600 focus:bg-white text-sm transition">
+                        </div>
+                    </div>
+
+                    <div class="space-y-1.5">
+                        <label class="text-[11px] font-bold text-slate-600 uppercase">Alamat Rumah Lengkap</label>
+                        <textarea id="siswa-alamat" rows="2" required placeholder="Tuliskan nama jalan, RT/RW, kelurahan, kecamatan, dan kota/kabupaten tempat tinggal saat ini..." class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-blue-600 focus:bg-white text-sm transition resize-none"></textarea>
+                    </div>
+                </div>
+
+                <div class="pt-4">
+                    <button type="submit" class="w-full bg-emerald-600 text-white font-black py-4 rounded-2xl hover:bg-emerald-700 transition shadow-lg shadow-emerald-600/25 text-sm tracking-wide uppercase flex items-center justify-center gap-2 cursor-pointer transform active:scale-[0.99]">
+                        <i class="fab fa-whatsapp text-lg"></i> Kirim Formulir & Hubungkan ke WA Sekolah
+                    </button>
+                    <p class="text-[10px] text-slate-400 text-center mt-3"><i class="fas fa-info-circle"></i> Setelah menekan tombol, draf pesan otomatis terbentuk. Anda tinggal menekan tombol kirim di aplikasi WhatsApp.</p>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 text-slate-500 py-6 text-center text-xs">
+        <p>&copy; 2026 Panitia PPDB Online SMK KEUANGAN. Seluruh Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <script>
+        // ENGINE PENGIRIMAN: Menyusun Data PPDB SMK Super Rapi Ke WA Sekolah
+        function kirimFormPPDB(event) {
+            event.preventDefault();
+            
+            // 1. Ambil data Input Bagian 1 (Siswa)
+            const namaSiswa = document.getElementById('siswa-nama').value;
+            const waSiswa = document.getElementById('siswa-wa').value;
+            const smpSiswa = document.getElementById('siswa-smp').value;
+            const jkSiswa = document.getElementById('siswa-jk').value;
+            
+            // 2. Ambil data Input Bagian 2 (Akademik)
+            const nilaiSiswa = document.getElementById('siswa-nilai').value;
+            const jurusanSiswa = document.getElementById('siswa-jurusan').value;
+            const seragamSiswa = document.getElementById('siswa-seragam').value;
+            
+            // 3. Ambil data Input Bagian 3 (Orang Tua & Alamat)
+            const namaOrtu = document.getElementById('ortu-nama').value;
+            const waOrtu = document.getElementById('ortu-wa').value;
+            const alamatSiswa = document.getElementById('siswa-alamat').value;
+            
+            // =========================================================================
+            // PENTING: GANTI ANGKADIBALIK TANDA KUTIP DIBAWAH INI MENJADI NOMOR WA SEKOLAH/DEKOLA!
+            // Gunakan format kode negara indonesia tanpa tanda plus (+). Contoh: 628123456789
+            const nomorWaSekolah = "6287710591220"; 
+            // =========================================================================
+            
+            // Menyusun format template chat WhatsApp profesional layaknya sistem bot otomatis
+            const isiPesanText = `*PENDAFTARAN SISWA BARU (PPDB) ONLINE* %0A` +
+                                 `----------------------------------------%0A%0A` +
+                                 `*IDENTITAS CALON SISWA:*%0A` +
+                                 `• Nama Lengkap: ${namaSiswa}%0A` +
+                                 `• Jenis Kelamin: ${jkSiswa}%0A` +
+                                 `• No. WA Siswa: ${waSiswa}%0A` +
+                                 `• Asal Sekolah: ${smpSiswa}%0A%0A` +
+                                 `*AKADEMIK & JURUSAN:*%0A` +
+                                 `• Pilihan Jurusan: *${jurusanSiswa}*%0A` +
+                                 `• Rata-Rata Rapor: ${nilaiSiswa}%0A` +
+                                 `• Ukuran Seragam: ${seragamSiswa}%0A%0A` +
+                                 `*DATA ORANG TUA / WALI:*%0A` +
+                                 `• Nama Ortu/Wali: ${namaOrtu}%0A` +
+                                 `• No. HP/WA Ortu: ${waOrtu}%0A%0A` +
+                                 `*ALAMAT RUMAH:*%0A` +
+                                 `"${alamatSiswa}"%0A%0A` +
+                                 `----------------------------------------%0A` +
+                                 `Mohon segera diproses untuk verifikasi berkas dan jadwal tes masuk sekolah. Terima kasih Panitia PPDB!`;
+            
+            // Membuka tautan API kirim pesan WhatsApp
+            const URL_REDIRECT = `https://api.whatsapp.com/send?phone=${nomorWaSekolah}&text=${isiPesanText}`;
+            window.open(URL_REDIRECT, '_blank');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK KEUANGAN - Website Penerimaan Siswa Baru</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        .bg-pattern {
+            background-image: radial-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased bg-pattern">
+
+    <div class="bg-gradient-to-r from-indigo-700 to-blue-600 text-white text-xs font-medium py-2 px-4 text-center tracking-wide">
+        <i class="fas fa-bullhorn mr-2"></i> PENDAFTARAN GELOMBANG 1 TELAH DIBUKA! Dapatkan potongan biaya gedung hingga 50% bagi pendaftar bulan ini.
+    </div>
+
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-3">
+                    <div class="bg-blue-600 text-white p-2.5 rounded-xl font-black text-xl shadow-md shadow-blue-500/20 tracking-wider">SMK</div>
+                    <div>
+                        <span class="font-black text-2xl tracking-tight text-slate-900 block leading-none">KEUANGAN</span>
+                        <span class="text-[10px] tracking-widest uppercase font-bold text-blue-600">Cerdas • Terampil • Berakhlak</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-6 font-semibold text-sm">
+                    <a href="#tentang" class="text-slate-600 hover:text-blue-600 transition">Tentang</a>
+                    <a href="#jurusan" class="text-slate-600 hover:text-blue-600 transition">Jurusan</a>
+                    <a href="#galeri" class="text-slate-600 hover:text-blue-600 transition">Keseharian</a>
+                    <a href="#fasilitas" class="text-slate-600 hover:text-blue-600 transition">Fasilitas</a>
+                    <a href="#kontak" class="text-slate-600 hover:text-blue-600 transition">Lokasi</a>
+                    <a href="pendaftaran.html" class="bg-blue-600 text-white px-5 py-3 rounded-xl hover:bg-blue-700 transition shadow-lg shadow-blue-500/20 flex items-center gap-2">
+                        <i class="fas fa-edit"></i> Daftar Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative bg-slate-900 text-white overflow-hidden py-24 px-4 sm:px-6 lg:px-8">
+        <div class="absolute inset-0 opacity-20 bg-[url('images/hero-bg.jpg')] bg-cover bg-center mix-blend-overlay"></div>
+        <div class="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-center md:text-left">
+                <span class="inline-flex items-center bg-blue-500/10 text-blue-400 border border-blue-500/20 px-3 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 mr-2 animate-ping"></span> Penerimaan Siswa Baru TA 2026/2027
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none text-white">
+                    Raih Karier Impianmu <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400">Sebelum Kamu Lulus!</span>
+                </h1>
+                <p class="text-lg text-slate-300 max-w-xl font-normal leading-relaxed">
+                    SMK KEUANGAN menghadirkan sistem pembelajaran kerja nyata (Dual System) yang langsung bermitra dengan puluhan perusahaan top nasional.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
+                    <a href="pendaftaran.html" class="bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-bold px-8 py-4 rounded-xl hover:opacity-90 transition transform hover:-translate-y-1 text-center shadow-lg shadow-orange-500/20 text-sm tracking-wide uppercase">
+                        Buka Formulir Pendaftaran <i class="fas fa-chevron-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="relative justify-self-center md:justify-self-end w-full max-w-md">
+                <img src="images/gambar-1.png" alt="Siswa SMK" class="relative rounded-2xl shadow-2xl object-cover w-full h-[420px] cursor-pointer hover:opacity-90 transition duration-300" onclick="openLightbox(this)">
+            </div>
+        </div>
+    </header>
+
+    <section class="max-w-7xl mx-auto px-4 -mt-12 relative z-10">
+        <div class="bg-white rounded-2xl shadow-xl grid grid-cols-2 lg:grid-cols-4 p-8 gap-6 text-center border border-slate-100">
+            <div class="space-y-1"><p class="text-3xl lg:text-4xl font-black text-blue-600">90%</p><p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Alumni Terserap Kerja</p></div>
+            <div class="space-y-1 border-l border-slate-100"><p class="text-3xl lg:text-4xl font-black text-blue-600">55+</p><p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Mitra Industri Aktif</p></div>
+            <div class="space-y-1 border-l border-slate-100"><p class="text-3xl lg:text-4xl font-black text-blue-600">A</p><p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Akreditasi Unggul</p></div>
+            <div class="space-y-1 border-l border-slate-100"><p class="text-3xl lg:text-4xl font-black text-blue-600">Rp 0</p><p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Uang Pangkal Yatim</p></div>
+        </div>
+    </section>
+
+    <section id="tentang" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-6">
+                <span class="inline-block bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1.5 rounded-lg uppercase tracking-widest border border-blue-100">Siapa Kami?</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight leading-tight">Membentuk SDM Kompeten, Mandiri & Siap Menghadapi Era Global</h2>
+                <p class="text-slate-600 leading-relaxed text-base">
+                    SMK KEUANGAN adalah lembaga pendidikan vokasi swasta percontohan yang berkomitmen mencetak tenaga ahli menengah di bidang teknologi, bisnis keuangan, dan penataan administrasi perkantoran modern.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="images/gambar-2.jpg" alt="Pintu Masuk Sekolah" class="rounded-2xl shadow-md h-52 w-full object-cover cursor-pointer hover:scale-[1.02] transition duration-300" onclick="openLightbox(this)">
+                <img src="images/gambar-3.jpg" alt="Siswa Berdiskusi" class="rounded-2xl shadow-md h-52 w-full object-cover mt-6 cursor-pointer hover:scale-[1.02] transition duration-300" onclick="openLightbox(this)">
+            </div>
+        </div>
+    </section>
+
+    <section id="jurusan" class="py-24 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
+                <span class="text-xs font-bold bg-blue-500/20 text-blue-400 px-3 py-1.5 rounded-lg tracking-widest uppercase border border-blue-500/20">Kompetensi Keahlian</span>
+                <h2 class="text-3xl sm:text-4xl font-black tracking-tight">4 Jurusan Unggulan Berprospek Cerah</h2>
+                <p class="text-slate-400 text-sm">Klik tombol di bawah untuk melihat materi profil pelajaran, foto lab, dan peluang kerja detail masing-masing jurusan.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div class="bg-slate-800/60 rounded-2xl p-6 border border-slate-800 hover:border-blue-500 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="bg-blue-600 text-white w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold mb-6"><i class="fas fa-network-wired"></i></div>
+                        <h3 class="text-lg font-black mb-1 group-hover:text-blue-400 transition">TKJ</h3>
+                        <p class="text-xs font-bold text-blue-400 mb-3 uppercase tracking-wide">Teknik Komputer & Jaringan</p>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6">Kuasai masa depan teknologi digital! Mulai dari pengelolaan server cloud, merancang jaringan perusahaan, hingga mengamankan data dari cyber crime.</p>
+                    </div>
+                    <a href="profil_TKJ.html" class="w-full text-center py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-xl transition tracking-wide uppercase block">Pelajari Jurusan <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                
+                <div class="bg-slate-800/60 rounded-2xl p-6 border border-slate-800 hover:border-amber-500 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="bg-amber-500 text-slate-950 w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold mb-6"><i class="fas fa-university"></i></div>
+                        <h3 class="text-lg font-black mb-1 group-hover:text-amber-400 transition">PBK</h3>
+                        <p class="text-xs font-bold text-amber-400 mb-3 uppercase tracking-wide">Perbankan Syariah</p>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6">Menjadi ahli ekonomi syariah yang jujur dan profesional. Pelajari operasional bank modern, pelayanan transaksi finansial, hingga investasi syariah.</p>
+                    </div>
+                    <a href="profil_pbk.html" class="w-full text-center py-3 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs rounded-xl transition tracking-wide uppercase block">Pelajari Jurusan <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                
+                <div class="bg-slate-800/60 rounded-2xl p-6 border border-slate-800 hover:border-emerald-500 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="bg-emerald-600 text-white w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold mb-6"><i class="fas fa-calculator"></i></div>
+                        <h3 class="text-lg font-black mb-1 group-hover:text-emerald-400 transition">AKT</h3>
+                        <p class="text-xs font-bold text-emerald-400 mb-3 uppercase tracking-wide">Akuntansi</p>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6">Pondasi utama dari segala lini bisnis. Bangun keahlian menyusun laporan keuangan perusahaan skala besar secara digital menggunakan software akuntansi modern.</p>
+                    </div>
+                    <a href="profil_akt.html" class="w-full text-center py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl transition tracking-wide uppercase block">Pelajari Jurusan <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                
+                <div class="bg-slate-800/60 rounded-2xl p-6 border border-slate-800 hover:border-purple-500 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="bg-purple-600 text-white w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold mb-6"><i class="fas fa-folder-open"></i></div>
+                        <h3 class="text-lg font-black mb-1 group-hover:text-purple-400 transition">ADP</h3>
+                        <p class="text-xs font-bold text-purple-400 mb-3 uppercase tracking-wide">Admin Perkantoran</p>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6">Menjadi motor penggerak kantor modern. Kelola administrasi kearsipan digital, pelajari kemampuan public relations, dan kuasai tata kelola korporat.</p>
+                    </div>
+                    <a href="profil_adp.html" class="w-full text-center py-3 bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs rounded-xl transition tracking-wide uppercase block">Pelajari Jurusan <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeri" class="py-24 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-black text-slate-900 uppercase tracking-wide">Galeri Siswa</h2>
+                <p class="text-slate-500 text-sm mt-2">Klik gambar untuk melihat momen dokumentasi</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <img src="images/galeri-1.jpg" class="rounded-2xl aspect-[4/3] object-cover shadow-lg hover:scale-105 transition duration-300 cursor-pointer" alt="Let's Coding - Kegiatan Praktik Mandiri TKJ" onclick="openLightbox(this)">
+                <img src="images/galeri-2.jpg" class="rounded-2xl aspect-[4/3] object-cover shadow-lg hover:scale-105 transition duration-300 cursor-pointer" alt="Diskusi Kelompok Kelas Selesai Praktik" onclick="openLightbox(this)">
+                <img src="images/galeri-3.jpg" class="rounded-2xl aspect-[4/3] object-cover shadow-lg hover:scale-105 transition duration-300 cursor-pointer" alt="Ujian Kompetensi Keahlian" onclick="openLightbox(this)">
+                <img src="images/galeri-4.jpg" class="rounded-2xl aspect-[4/3] object-cover shadow-lg hover:scale-105 transition duration-300 cursor-pointer" alt="Kegiatan Ekstrakurikuler" onclick="openLightbox(this)">
+            </div>
+        </div>
+    </section>
+
+    <section id="fasilitas" class="py-24 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-black text-slate-900 mb-2 uppercase tracking-wide">Sarana Prasarana</h2>
+            <p class="text-slate-500 text-sm mb-16">Fasilitas modern penunjang belajar yang nyaman (Klik gambar untuk melihat)</p>
+            <div class="grid sm:grid-cols-3 gap-6">
+                <div class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <img src="images/fasilitas-1.jpg" class="rounded-xl w-full h-40 object-cover mb-4 cursor-pointer hover:opacity-90 transition" alt="Gedung sekolah utama yang megah dan nyaman" onclick="openLightbox(this)">
+                    <h4 class="font-bold">Gedung sekolah</h4>
+                </div>
+                <div class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <img src="images/fasilitas-2.jpg" class="rounded-xl w-full h-40 object-cover mb-4 cursor-pointer hover:opacity-90 transition" alt="Lapangan olahraga multifungsi untuk area siswa berkumpul" onclick="openLightbox(this)">
+                    <h4 class="font-bold">Lapangan sekolah</h4>
+                </div>
+                <div class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <img src="images/fasilitas-3.jpg" class="rounded-xl w-full h-40 object-cover mb-4 cursor-pointer hover:opacity-90 transition" alt="Kantin sekolah berkonsep kafe modern dan bersih" onclick="openLightbox(this)">
+                    <h4 class="font-bold">Cafe sekolah</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="inline-block bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1.5 rounded-lg uppercase tracking-widest border border-blue-100">Hubungi & Kunjungi Kami</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Informasi Lengkap Kampus Utama</h2>
+                    <p class="text-slate-600 leading-relaxed">Pintu kampus kami selalu terbuka untuk kunjungan wali murid dan calon siswa pada jam kerja operasional.</p>
+                    
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-100 text-blue-600 p-3 rounded-xl"><i class="fas fa-map-marker-alt text-lg"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Alamat SMK KEUANGAN</h4>
+                                <p class="text-slate-500 text-sm mt-0.5">Jl. Gulama Jl. Paradise, Tengkerang Bar., Kec. Marpoyan Damai, Kota Pekanbaru, Riau 28124</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-emerald-100 text-emerald-600 p-3 rounded-xl"><i class="fab fa-whatsapp text-lg"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">WhatsApp / Call Center PPDB</h4>
+                                <p class="text-slate-500 text-sm mt-0.5">+62 877-1059-1220(pak ikyy)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-amber-100 text-amber-600 p-3 rounded-xl"><i class="fas fa-envelope text-lg"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Email Resmi</h4>
+                                <p class="text-slate-500 text-sm mt-0.5">rizkyarsyahputra@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-purple-100 text-purple-600 p-3 rounded-xl"><i class="fas fa-clock text-lg"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Jam Operasional Pelayanan</h4>
+                                <p class="text-slate-500 text-sm mt-0.5">Senin - Jumat (07.30 - 15.30 WIB) & Sabtu (08.00 - 12.00 WIB)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="lightbox" class="fixed inset-0 z-[100] hidden bg-black/90 flex items-center justify-center p-4" onclick="this.style.display='none'">
+        <img id="lightbox-img" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl" src="" alt="Preview">
+    </div>
+
+    <script>
+        function openLightbox(el) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = el.src;
+            lightbox.style.display = 'flex';
+        }
+    </script>
+
+</body>
+</html>
